@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Thumblr by george-i</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Thumblr</h1>
+        <p>'thumblr' creates thumbnails from images using HTML5 canvas</p>
+
+        <p class="view"><a href="https://github.com/george-i/thumblr">View the Project on GitHub <small>george-i/thumblr</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/george-i/thumblr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/george-i/thumblr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/george-i/thumblr">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>thumblr</h1>
+
+<h1></h1>
+
+<p><strong>'thumblr'</strong> creates thumbnails from images using HTML5 canvas.</p>
+
+<p>There are two versions of the code: JavaScript and jQuery plugin.</p>
+
+<p>For both versions you pass options and a callback.
+The callback returns null on error or object: url,width,height.</p>
+
+<h3>JavaScript version request example.</h3>
+
+<pre><code>// image url, thumb width, thumb height, file type, quality, callback
+var request = {
+    image: document.getElementById('test'), /* DOM image element, required */
+    width: 220, /* integer, optional, default: 220 */
+    height: 180, /* number, optional, default: 180 */
+    type: 'image/png', /* string, optional, default: 'image/png' */
+    quality: 1, /* number, optional, default: 1 */
+};
+thumblr(request, function(data){
+    // returns null on error or object: url,width,height
+    document.body.innerHTML += '&lt;img src="'+data.url+'" width="'+data.width+'" height="'+data.height+'"/&gt;';
+});
+</code></pre>
+
+<h3>jQuery version request example.</h3>
+
+<pre><code>var opts = {
+    width: 220, /* integer, optional, default: 220 */
+    height: 180, /* number, optional, default: 180 */
+    type: 'image/png', /* string, optional, default: 'image/png' */
+    quality: 1, /* number, optional, default: 1 */
+};
+$('#test').thumbler(opts,function(data){
+    // returns null on error or object: url,width,height
+    $('body').append('&lt;img src="'+data.url+'" width="'+data.width+'" height="'+data.height+'"/&gt;')
+});
+</code></pre>
+
+<h3>Example</h3>
+
+<p>Included in 'thumblr.html' and 'thumblr_jquery.html'.</p>
+
+<h4>License</h4>
+
+<p>Copyright 2013 George I.</p>
+
+<p>Licensed under the MIT License</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/george-i">george-i</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
