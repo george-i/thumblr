@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>JavaScript thumblr example</title>
+  <script type="text/javascript" src="js/thumblr.js"></script>
+</head>
+
+<body>
+    <img id="test" src="rembrandt.jpg"/>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+
+	// image url, thumb width, thumb height, file type, quality, callback
+	var request = {
+		image: document.getElementById('test'), /* DOM image element, required */
+		width: 220, /* integer, optional, default: 220 */
+		height: 180, /* number, optional, default: 180 */
+		type: 'image/png', /* string, optional, default: 'image/png' */
+		quality: 1, /* number, optional, default: 1 */
+	};
+	thumblr(request, function(data){
+		// returns null on error or object: url,width,height
+        document.body.innerHTML += '<img src="'+data.url+'" width="'+data.width+'" height="'+data.height+'"/>';
+	});
+    
+    /*]]>*/
+    </script>
+</body>
+
+</html>

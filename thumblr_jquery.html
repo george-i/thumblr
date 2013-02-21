@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>jQuery thumblr example</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.thumblr.js"></script>
+</head>
+
+<body>
+    <img id="test" src="rembrandt.jpg"/>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+
+  	var opts = {
+  		width: 220, /* integer, optional, default: 220 */
+  		height: 180, /* number, optional, default: 180 */
+  		type: 'image/png', /* string, optional, default: 'image/png' */
+  		quality: 1, /* number, optional, default: 1 */
+  	};
+  	$('#test').thumbler(opts,function(data){
+  		// returns null on error or object: url,width,height
+  		$('body').append('<img src="'+data.url+'" width="'+data.width+'" height="'+data.height+'"/>')
+  	});
+
+    /*]]>*/
+    </script>
+</body>
+
+</html>
