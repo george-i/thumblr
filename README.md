@@ -39,7 +39,7 @@ The callback returns null on error or object: url,width,height.
 <h3>Example</h3>
 Included in 'thumblr.html' and 'thumblr_jquery.html'.
 	
-<h1>License</h1>
+<h4>License</h4>
 
 Copyright 2013 George I.
 
